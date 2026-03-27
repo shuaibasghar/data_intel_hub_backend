@@ -1,0 +1,48 @@
+ #requirements file
+# note which revision of python, for example 3.9.6
+# in this file, insert all the pip install needs, include revision
+
+#for example:
+#torch==2.0.1
+#matplotlib==3.7.2
+
+# Existing crewai dependencies
+crewai
+crewai-tools
+numpy
+pandas
+
+# FastAPI and web framework dependencies
+fastapi
+uvicorn[standard]
+python-multipart
+python-jose[cryptography]
+passlib[bcrypt]
+python-dotenv
+
+# Database dependencies
+sqlalchemy
+alembic
+psycopg2-binary
+pymongo>=4.0.0
+
+# AWS and file handling
+boto3
+Pillow
+
+# Email handling
+emails
+
+# Additional utilities
+pydantic
+pydantic-settings
+email-validator
+
+# YAML support
+PyYAML
+
+# JWT and security
+python-jose[cryptography]
+
+pymongo>=4.0.0
+motor>=3.3.1
