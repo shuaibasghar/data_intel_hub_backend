@@ -30,7 +30,7 @@ app = FastAPI(
 # CORS middleware
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173", "https://dataintel-hub-frontend.onrender.com"],  # Allow frontend origin for local dev
+    allow_origins=["http://localhost:5173"],  
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -40,6 +40,7 @@ app.add_middleware(
 security = HTTPBearer()
 
 # Include routers
+#tag is for swagger ui and redoc ui
 app.include_router(user_router, prefix="/api/users", tags=["users"])
 app.include_router(report_router, prefix="/api/users", tags=["reports"])
 
@@ -53,7 +54,7 @@ async def root():
 async def health_check():
     return {"status": "healthy", "service": "DataIntel Hub API"}
 
-# Error handling
+# Error handling globally show the error message when error occurs anywhere in the code
 @app.exception_handler(Exception)
 async def global_exception_handler(request, exc):
     return error_handler(request, exc)
@@ -63,6 +64,20 @@ async def global_exception_handler(request, exc):
 port = int(os.getenv("PORT", 8090))
 
 if __name__ == "__main__":
+
+      # Get configuration from environment variables
+    host = os.getenv("HOST", "0.0.0.0")
+    port = int(os.getenv("PORT", 8000))
+    reload = os.getenv("NODE_ENV", "development") == "development"
+    
+    print(f"🚀 Starting DataIntel Hub Backend server...")
+    print(f"📍 Host: {host}")
+    print(f"🔌 Port: {port}")
+    print(f"🔄 Reload: {reload}")
+    print(f"📖 API Documentation: http://{host}:{port}/docs")
+    print(f"📚 ReDoc Documentation: http://{host}:{port}/redoc")
+    print("=" * 50)
+    
     uvicorn.run(
         "main:app",
         host="0.0.0.0",

@@ -11,7 +11,7 @@ crewai
 crewai-tools
 numpy
 pandas
-
+ipython
 # FastAPI and web framework dependencies
 fastapi
 uvicorn[standard]

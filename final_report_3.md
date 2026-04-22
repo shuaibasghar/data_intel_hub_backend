@@ -1,98 +1,106 @@
-## Comprehensive Report on User Management and Performance Insights
+Final Report: Customer Dataset Analysis and Insights
 
-### Key Findings
-The following tables summarize key metrics related to user roles, subscription status, user creation dates, email validity, and user location breakdown.
+1. Key Findings
 
-#### User Role Distribution
+Geographic Distribution:
+The customer base is globally diverse with representation from 46 distinct countries. The majority have single count occurrences, with a few countries like Dominican Republic and Bulgaria having 2 customers each. The diversity indicates potential for targeted regional marketing campaigns.
+(Table 1: Distribution of Customers by Country)
 
-| Role         | Count |
-|--------------|-------|
-| super_admin  | 2     |
-| client       | 3     |
+| Country                             | Count |
+|-----------------------------------|-------|
+| Dominican Republic                | 2     |
+| Bulgaria                       | 2     |
+| Chile                             | 1     |
+| Djibouti                         | 1     |
+| Antigua and Barbuda              | 1     |
+| ... (additional countries below)            |       |
 
-#### Subscription Status
+Company Representation:
+There is a wide distribution of unique companies; no company has more than one customer record in the sample of 49 records analyzed. This suggests that the customer set is broadly spread across organizations rather than concentrated.
+(Table 2: Counts of Unique Companies - Sample)
 
-| Status            | Count |
-|-------------------|-------|
-| Subscribed         | 2     |
-| Not Subscribed     | 3     |
+| Company                                  | Count |
+|------------------------------------------|-------|
+| Rasmussen Group                         | 1     |
+| Vega-Gentry                            | 1     |
+| Murillo-Perry                         | 1     |
+| "Dominguez, Mcmillan and Donovan"     | 1     |
+| "Martin, Lang and Andrade"             | 1     |
 
-#### User Creation Dates
+Subscription Date Distribution:
+Subscriptions span three years with the following counts:
+- 2020: 19 customers (approx. 38.8%)
+- 2021: 21 customers (approx. 42.9%)
+- 2022: 9 customers (approx. 18.3%)
+This shows a recent uptick in subscriptions in 2021 with some decline in early 2022.
+(Table 3: Subscription Date Distribution by Year)
 
-| Created Date       | Count |
-|--------------------|-------|
-| 2025-05-07         | 3     |
-| 2025-05-08         | 2     |
-| 2025-07-03         | 1     |
+| Year | Number of Subscriptions |
+|-------|------------------------|
+| 2020  | 19                     |
+| 2021  | 21                     |
+| 2022  | 9                      |
 
-#### User Email Validity
+City and Country Examples:
+Sample cities show distinct geographical spread with no overlapping city names within the limited sample.
+(Table 4: City and Country Sample Counts)
 
-| Valid Email | Count |
-|-------------|-------|
-| Valid       | 5     |
-| Invalid     | 0     |
+| City           | Country                | Count |
+|----------------|------------------------|-------|
+| East Leonard   | Chile                  | 1     |
+| East Jimmychester | Djibouti              | 1     |
+| Isabelborough  | Antigua and Barbuda    | 1     |
+| Bensonview     | Dominican Republic      | 1     |
+| West Priscilla | Slovakia (Slovak Republic) | 1     |
 
-#### User Location Breakdown
+2. Performance Insights
 
-| State | Count |
-|-------|-------|
-| CA    | 1     |
-| N/A   | 4     |
+- Customer acquisition has varied over the years; 2021 was strongest.
+- Geographic spread indicates potential new market development or need for localized marketing support.
+- Company distribution shows no concentration; thus, outreach needs to be diverse and personalized.
 
-### Performance Insights
-#### Suggested Actions for Each Problem Identified
+3. Satisfaction / Feedback
 
-1. **User Account Issues**
-   - **Problem**: Multiple users with similar names or email formats.
-   - **Suggestions**:
-     - Implement stricter email validation.
-     - Introduce username requirements.
-     - Regularly audit user accounts for potential duplicates.
+- No direct satisfaction or feedback data was provided.
+- It is recommended to integrate customer feedback fields into customer records for richer insights.
 
-2. **Subscription Management**
-   - **Problem**: Inactive subscriptions showing up.
-   - **Suggestions**:
-     - Set up automated reminders for subscription expirations.
-     - Provide options on dashboards for users to manage subscriptions.
-     - Analyze non-renewal reasons for service improvement.
+4. Suggested Actions
 
-3. **Data Integrity**
-   - **Problem**: Missing critical fields in user profiles.
-   - **Suggestions**:
-     - Enforce mandatory fields during user registration.
-     - Periodically review profiles to complete missing information.
-     - Request missing info during account verifications.
+1. Data Consistency and Validation
+- Standardize phone number formats using country-specific validation.
 
-4. **Role Management**
-   - **Problem**: Ineffective usage of admin accounts.
-   - **Suggestions**:
-     - Conduct training sessions for admins.
-     - Implement a feedback feature for admin functionalities.
-     - Monitor admin activities to identify training needs.
+2. Subscription Date Analysis
+- Segment customers by subscription year for tailored marketing campaigns.
 
-5. **Contact Information**
-   - **Problem**: Inconsistent phone number formatting.
-   - **Suggestions**:
-     - Standardize data entry formats for phone numbers.
-     - Prompt users to periodically update contact info.
-     - Include validations during data entry.
+3. Email Domain and Format Checks
+- Implement automated email verification to minimize bounce and improve engagement.
 
-6. **User Engagement**
-   - **Problem**: Low engagement from active users.
-   - **Suggestions**:
-     - Develop targeted marketing strategies for engagement.
-     - Create a community forum or feedback system.
-     - Personalize content based on user interests and history.
+4. Geographic and Country-Specific Insights
+- Deploy region-specific regulations and cultural considerations for campaigns.
 
-### Satisfaction or Feedback Summary
-While specific satisfaction ratings and qualitative feedback have not been provided, it is crucial to initiate a feedback loop with users to assess satisfaction levels. Surveys and direct feedback channels would be beneficial for continuous improvement.
+5. Website URL Quality
+- Enforce HTTPS use and verify URL accuracy routinely.
 
-### Visual Representations of Key Metrics
-- **Category Distribution**: [Chart URL](http://yourwebsite.com/charts/category_distribution.png)
-- **Trend of Values Over Time**: [Chart URL](http://yourwebsite.com/charts/trend_values_over_time.png)
-- **Comparative Performance Metrics**: [Chart URL](http://yourwebsite.com/charts/comparative_performance.png)
-- **Category Share Distribution**: [Chart URL](http://yourwebsite.com/charts/category_share_distribution.png)
-- **Box Plot of Values by Category**: [Chart URL](http://yourwebsite.com/charts/box_plot_values_per_category.png)
+6. Data Entry Errors and Anomalies
+- Use proper quoting/escaping in CSV data to avoid parsing errors due to special characters.
 
-### Conclusion
-This report serves to provide insights into the performance of the user management system, highlighting areas for improvement and actionable suggestions for each identified issue. Regular review and implementation of these suggestions can greatly enhance the overall user experience and system efficiency.
+7. Multi-Contact Number Handling
+- Clearly label phone number types for better CRM integration.
+
+8. Customer Relationship Management
+- Add feedback/notes fields to customer records.
+
+9. Language and Localization
+- Normalize location and company names using authoritative sources.
+
+10. Data Privacy and Compliance
+- Ensure data handling complies with GDPR/CCPA, use encryption, and obtain consents.
+
+Summary Charts (Conceptual, to be generated based on the above tables):
+
+- Bar Chart of Customer Counts by Country (highlighting top countries)
+- Line/Bar Chart of Subscription Counts by Year (trend over 2020-2022)
+- Pie Chart showing distribution of unique company representation
+- Table alongside chart for City-Country counts
+
+This integrated report offers stakeholders a clear view of customer base distribution, subscription trends, and actionable insights for data governance and marketing strategies to improve customer engagement and data quality.
